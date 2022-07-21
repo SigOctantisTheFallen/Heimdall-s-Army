@@ -1,0 +1,27 @@
+{
+  "name": "robowars-bot",
+  "version": "1.0.0",
+  "description": "A bot to coordinate the Robowars event for Pravega 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xavier Xanthopoulos",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^0.5.0",
+    "discord-api-types": "^0.36.2",
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DragonSlayerXavier/Heimdall-Robowars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DragonSlayerXavier/Heimdall-Robowars/issues"
+  },
+  "homepage": "https://github.com/DragonSlayerXavier/Heimdall-Robowars#readme"
+}
