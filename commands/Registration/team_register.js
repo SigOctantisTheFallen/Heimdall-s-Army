@@ -51,15 +51,16 @@ module.exports = {
                 memberInfo: members
             })
                 .then(() => {
-                    await dbquery_users.updateOne({
-                        teamID: team_ID
-                    })
-                        .then(() => {
-                            interaction.reply({
-                                content: `You have successfully been registered as a member of team \`${team_ID}\``,
-                                ephemeral: true
-                            });
-                        })
+                    console.log("Member pushed to team.");
+                });
+            await dbquery_users.updateOne({
+                teamID: team_ID
+            })
+                .then(() => {
+                    interaction.reply({
+                        content: `You have successfully been registered as a member of team \`${team_ID}\``,
+                        ephemeral: true
+                    });
                 })
         }
         var new_team_ID, dbquery_teams;
