@@ -38,7 +38,7 @@ module.exports = {
             }
             let strength = dbquery_teams.strength;
             let members = dbquery_teams.memberInfo;
-            if (strength >= 6) {
+            if (strength >= 10) {
                 return interaction.reply({
                     content: 'The team already has the maximum number of members',
                     ephemeral: true
