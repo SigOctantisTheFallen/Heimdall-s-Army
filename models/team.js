@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const teamSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   teamID: { type: String },
+  teamName: { type: String },
   strength: { type: Number },
   memberInfo: {
     type: [{

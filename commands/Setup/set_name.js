@@ -6,11 +6,11 @@ const User = require('../../models/user');
 module.exports = {
     category: "Setup",
     data: new SlashCommandBuilder()
-        .setName('set_description')
-        .setDescription('Change the description of your bot (maximum of 2000 characters)')
+        .setName('set_name')
+        .setDescription('Change the team name of your bot (maximum of 50 characters)')
         .addStringOption(option => option
-            .setName('description')
-            .setDescription('The description for your bot. Please use \\n for line breaks.')
+            .setName('team_name')
+            .setDescription('The team name for your bot.')
             .setRequired(true)),
     async execute(client, interaction) {
         const dbquery_users = await User.findOne({ userID: interaction.member.id }).exec();
@@ -27,13 +27,13 @@ module.exports = {
             })
         }
         const dbquery_teams = await Team.findOne({ teamID: dbquery_users.teamID }).exec();
-        const desc = interaction.options.getString('description').replace('\\n', '\n').substring(0,2000);
+        const name = interaction.options.getString('team_name').substring(0,50);
         await dbquery_teams.updateOne({
-            description: desc
+            teamName: name
         })
             .then(() => {
                 interaction.reply({
-                    content: `Your robot description has been set to \`${desc}\``,
+                    content: `Your team name has been set to \`${name}\``,
                     ephemeral: true
                 });
             })

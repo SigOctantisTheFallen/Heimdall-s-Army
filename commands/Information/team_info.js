@@ -33,6 +33,7 @@ module.exports = {
             .setTitle('Team Information')
             .addFields([
                 { name: 'Team ID', value: dbquery_teams.teamID },
+                { name: 'Team Name', value: dbquery_teams.teamName},
                 { name: 'Members', value: memberMentions },
                 { name: 'Robot Description', value: dbquery_teams.description }
             ]);

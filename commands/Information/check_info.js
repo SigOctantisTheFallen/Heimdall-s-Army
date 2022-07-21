@@ -37,6 +37,7 @@ module.exports = {
         let textEmbed = new MessageEmbed()
             .setTitle('Team Information')
             .addFields([
+                { name: 'Team Name', value: dbquery_teams.teamName},
                 { name: 'Members', value: memberMentions },
                 { name: 'Robot Description', value: dbquery_teams.description }
             ]);
