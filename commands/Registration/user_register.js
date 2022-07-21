@@ -8,7 +8,7 @@ module.exports = {
         .setName('user_register')
         .setDescription('Register as a user.')
         .addStringOption(option => option
-            .setName('Participant_Name')
+            .setName('participant_name')
             .setDescription('Your name (This cannot be changed later)')
             .setRequired(true)),
     async execute(client, interaction) {

@@ -9,8 +9,8 @@ module.exports = {
         .setName('team_register')
         .setDescription('Register your team for the event.')
         .addStringOption(option => option
-            .setName('Team_ID')
-            .setDescription('The ID of the team you would like to register as a participant of. (Leave blank to create a new team)')
+            .setName('team_id')
+            .setDescription('The ID of the team you would like to register as a participant of. Leave blank to create a new team')
             .setRequired(false)),
     async execute(client, interaction) {
         let dbquery_users = await User.findOne({ userID: interaction.member.id }).exec();
