@@ -10,7 +10,7 @@ module.exports = {
         .setName('check_info')
         .setDescription('Check the team information of another user')
         .addUserOption(option => option
-            .setName('User')
+            .setName('user')
             .setDescription('Ping the user whose team information you want to check.')
             .setRequired(true)),
     async execute(client, interaction) {
